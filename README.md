@@ -87,7 +87,7 @@ If `-dryRun=false` (default) then we call FreshBooks API `method=invoice.create`
 Does a dry-run (only prints XML no FreshBooks calls are made):
 
 	csv2i -account=mycorp -csvFile=LLS_invoices.csv \
-	   -fbClientID=431102 -fbPONum=PO-7654321 \
+	   -fbClientID=499999 -fbPONum=PO-7654321 \
 	   -fbTask=Hourly-225 \
 	   -fbToken=********** \
 	   -trace=true -dryRun=true
