@@ -66,21 +66,21 @@ Example: **Lines** file for Invoice `LLS-65` (saved in `LLS-65.csv`):
 
 And make a basic authentication request using `fbToken`.
 
-It'll then take `csvFile` (from `csvDir`) and use it as a driver parsing one invoice at a time and getting it's Lines file (INVOICE_NUM.csv) from `csvDir`.
+It'll then take `csvFile` (from `csvDir`) and use it as a driver parsing one invoice at a time and getting it's Lines file (`INVOICE_NUM.csv`) from `csvDir`.
 
 Once the invoice and it's lines are assembled, this block of data is printed on the screen.
 
-If `-trace=true` then we print an assembled FreshBooks XML call.
-
-We then parse additional parameters as follows:
+Next, parse additional parameters as follows:
 
 1. `fbClientID` as `invoice.client_id`
 2. `fbPONum` as `invoice.po_number`
 3. `fbTask` as `line.name`
 
-If `-dryRun=true` then we move to the next invoice (no call to FreshBooks is made).
+If `-trace=true`, print an assembled FreshBooks XML call.
 
-If `-dryRun=false` (default) then we call FreshBooks API `method=invoice.create` and parse it's response which could be either a newly created InvoiceID or an Error message.
+If `-dryRun=true`, move to the next invoice (no call to FreshBooks is made).
+
+If `-dryRun=false` (default), call FreshBooks API `method=invoice.create` and parse it's response which could be either a newly created InvoiceID or an Error message.
 
 ## Examples
 
