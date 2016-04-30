@@ -21,7 +21,7 @@ Example (saved in `LLS_invoices.csv`):
 	2016-02-03,LLS-63,93.75
 	2016-03-01,LLS-64,500.00
 	2016-04-01,LLS-65,1406.25
-	
+
 ### Lines
 
 For each `INVOICE_NUM` in `LLS_invoices.csv` a **Lines** file should be created and named `INVOICE_NUM.csv`. With the following fields:
@@ -86,8 +86,8 @@ If `-dryRun=false` (default) then we call FreshBooks API `method=invoice.create`
 
 Does a dry-run (only prints XML no FreshBooks calls are made):
 
-	csv2i -account= mycorp -csvFile=LLS_invoices.csv \
-	   -fbClientID=431102 -fbPONum= PO-7654321 \
+	csv2i -account=mycorp -csvFile=LLS_invoices.csv \
+	   -fbClientID=431102 -fbPONum=PO-7654321 \
 	   -fbTask=Hourly-225 \
 	   -fbToken=********** \
 	   -trace=true -dryRun=true
@@ -97,7 +97,7 @@ Creates invoices listed in `LLS_invoices.csv`
 	csv2i -account=mycorp -csvFile=LLS_invoices.csv \
 	   -fbClientID=499999 -fbPONum=PO-7654321 \
 	   -fbTask=Hourly-225 \
-	   -fbToken=****************
+	   -fbToken=**********
 
 ## License
 MIT
